@@ -1,0 +1,28 @@
+#importation
+base <- read.csv("base.csv",
+              header = TRUE,
+              sep = ",")
+
+#création de la base de donnée qui sera modifiée
+basem <- base
+
+#Transformation des réponses non comprises comme NA en véritables NA
+basem[basem == ""] <- NA
+basem[basem == "N/A"] <- NA
+
+#recodage des pas d'avis en non pour la question 24
+basem$Q966518[basem$Q966518 %in% c("Non", "Pas d'avis")] <- "Non"
+
+#recodage des PCS en classes inférieures, moyennes et supérieures
+basem$Q208171[basem$Q208171 %in% c("Ouvriers / Ouvrières", "Sans activité professionelle")] <- "classes inférieures"
+basem$Q208171[basem$Q208171 %in% c("Agriculteurs exploitants / Agricultrices exploitantes", "Employés / Employées", "Artisans / Artisanes, commerçants / commerçantes et chefs / cheffes d'entreprise", "Professions intermédiaires")]  <- "classes moyennes"
+basem$Q208171[basem$Q208171 %in% c("Cadres et professions intellectuelles supérieures")] <- "classes supérieures"
+
+#tentative de recodage du lieu de résidence en Paris et hors Paris
+residence <- ifelse(basem$Q208155 >= 75000 & basem$Q208155 < 75999, "Paris", "Hors Paris")
+
+#Recodage de la situation économique
+situ_eco <- ifelse(basem$Q558220 >= 4, "problèmes économiques importants", "problèmes économiques mineurs")
+
+
+
