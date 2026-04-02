@@ -1,1 +1,1 @@
-stp Davière une bonne note mon stuff
+RAJOUTER N EGAL DANS LES TRIS A PLAT
