@@ -1,0 +1,12 @@
+#tentative de faire quelque chose de la question 25
+
+#Liste des cinq vecteurs de la fonction
+table(basem$Q966519.1.)
+table(basem$Q966519.2.)
+table(basem$Q966519.3.)
+table(basem$Q966519.4.)
+table(basem$Q966519.5.)
+
+#En considérant les deux premières réponses comme les choses importantes et les trois dernières comme plus superficielles, on peu tenter de faire la somme des réponses des premières et deuxièmes places pour les soustraires aux troisièmes, quatrièmes et cinquièmes.
+#exemple pour les diplomes : 1(34) + 2(48) - [3(22) + 4(30) +5(18)] = 12
+#edit : après avoir essayé j'ai pas réussi à trouver de formules
