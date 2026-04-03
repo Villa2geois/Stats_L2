@@ -17,3 +17,7 @@ ifelse(basem$Q966519.1. == "L'adéquation avec vos compétences / diplômes", di
 
 #troisième tentative
 sum(basem$Q966519.1.%in%"L'adéquation avec vos compétences / diplômes")
+sum(basem$Q966519.1.%in%"Le fait que la structure mette en avant des intérêts écologiques")*5 + sum(basem$Q966519.2.%in%"Le fait que la structure mette en avant des intérêts écologiques")*4 + sum(basem$Q966519.3.%in%"Le fait que la structure mette en avant des intérêts écologiques")*3 + sum(basem$Q966519.4.%in%"Le fait que la structure mette en avant des intérêts écologiques")*2 + sum(basem$Q966519.5.%in%"Le fait que la structure mette en avant des intérêts écologiques")*1
+sum(basem$Q966519.1.%in%"L'équilibre vie professionnelle / vie personnelle")*5 + sum(basem$Q966519.2.%in%"L'équilibre vie professionnelle / vie personnelle")*4 + sum(basem$Q966519.3.%in%"Le fait que la structure mette en avant des intérêts écologiques")*3 + sum(basem$Q966519.4.%in%"L'équilibre vie professionnelle / vie personnelle")*2 + sum(basem$Q966519.5.%in%"L'équilibre vie professionnelle / vie personnelle")*1
+sum(basem$Q966519.1.%in%"Le fait que la structure mette en avant des intérêts écologiques") + sum(basem$Q966519.2.%in%"Le fait que la structure mette en avant des intérêts écologiques")
+
