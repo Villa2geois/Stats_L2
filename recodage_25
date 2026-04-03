@@ -23,3 +23,28 @@ sum(basem$Q966519.1.%in%"Le fait que la structure mette en avant des intérêts 
 
 
 basem$Q966519.1.[basem$Q966519.1. == "L'adéquation avec vos compétences / diplômes"]
+
+#réponse du prof
+basem <- data
+
+basem[basem == ""] <- NA
+basem[basem == "N/A"] <- NA
+
+basem$sexe <- ifelse(basem$Q001 %in% c("Homme", "Femme"), basem$Q001, NA)
+basem$sexe <- factor(basem$sexe)
+
+# Recodage variable écologique (elle est binaire)
+basem$eco <- ifelse(basem$Q966519.1 == "Le fait que la structure mette en avant des intérêts écologiques",
+                    "Oui", "Non")
+basem$eco <- factor(basem$eco)
+data_clean <- basem[!is.na(basem$sexe) & !is.na(basem$eco), ]
+
+# Table 
+table_test <- table(data_clean$sexe, data_clean$eco)
+
+# Affichage des résultats
+table_test
+prop.table(table_test, 1)
+
+# Test 
+chisq.test(table_test)
