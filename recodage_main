@@ -9,6 +9,7 @@ basem <- base
 #Transformation des réponses non comprises comme NA en véritables NA
 basem[basem == ""] <- NA
 basem[basem == "N/A"] <- NA
+basem$Q001[basem$Q001 == "Autre"] <- NA
 
 #recodage des pas d'avis en non pour la question 24
 basem$Q966518[basem$Q966518 %in% c("Non", "Pas d'avis")] <- "Non"
