@@ -26,12 +26,16 @@ situ_eco <- ifelse(basem$Q558220 >= 4, "problèmes économiques importants", "pr
 
 
 #recodage question cours environnement
-basem$Q966513[basem$Q966513 %in% c("Oui, plusieurs", "Oui, un seul")] <- "Oui"
+#basem$Q966513[basem$Q966513 %in% c("Oui, plusieurs", "Oui, un seul")] <- "Oui"
 
 
-#Nbr d'étudiants en
-table(basem$Q208163.SQ003) #Socio
+#Nbr d'étudiants en :
+sum(basem$Q208163.SQ001%in% "Oui") #histoire
+sum(basem$Q208163.SQ002%in% "Oui") #philo
 sum(basem$Q208163.SQ003%in% "Oui") #Socio
+sum(basem$Q208163.SQ004%in% "Oui") #anglais
+sum(basem$Q208163.SQ005%in% "Oui") #géographie
 
-#Nbr
+#recodage 21/24
+
 
