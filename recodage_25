@@ -11,3 +11,9 @@ table(basem$Q966519.5.)
 #exemple pour les diplomes : 1(34) + 2(48) - [3(22) + 4(30) +5(18)] = 12
 #edit : après avoir essayé j'ai pas réussi à trouver de formules
 nrow(basem[basem$Q966519.1. == "L'adéquation avec vos compétences / diplômes",])
+
+#seconde tentative
+ifelse(basem$Q966519.1. == "L'adéquation avec vos compétences / diplômes", diplome, rien)
+
+#troisième tentative
+sum(basem$Q966519.1.%in%"L'adéquation avec vos compétences / diplômes")
