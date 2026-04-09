@@ -37,6 +37,11 @@ sum(basem$Q208163.SQ003%in% "Oui") #Socio
 sum(basem$Q208163.SQ004%in% "Oui") #anglais
 sum(basem$Q208163.SQ005%in% "Oui") #géographie
 
-#recodage 21/24
+#Recodage 21
+basem$Q966514[basem$Q966514 %in% c("Non", "Pas d'avis")] <- "Non"
+#Tri croisé 21/24
+table(basem$Q966514, basem$Q966518)
 
+#classe sociale des parents / 24
+table(basem$Q208171, basem$Q966518)
 
