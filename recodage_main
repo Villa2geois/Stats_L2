@@ -20,6 +20,7 @@ basem$Q208171[basem$Q208171 %in% c("Agriculteurs exploitants / Agricultrices exp
 basem$Q208171[basem$Q208171 %in% c("Cadres et professions intellectuelles supérieures")] <- "classes supérieures"
 
 #tentative de recodage du lieu de résidence en Paris et hors Paris
+basem$Q208155[basem$Q208155 == 75] <- 75000
 residence <- ifelse(basem$Q208155 >= 75000 & basem$Q208155 < 75999, "Paris", "Hors Paris")
 
 #Recodage de la situation économique
